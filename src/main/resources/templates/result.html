@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Your number is <span data-th-text="${val}"> </span>. Your new number is  <span data-th-text="${newNum}"></span></h1>
+
+    <br/>
+
+    <h1>Your list of <span data-th-text="${val}"></span> random numbers are </h1> 
+    <ul data-th-each="v:${randNums}">
+        <h1 data-th-text = "${v}"></h1>
+    </ul>
+
+    <h1>The images are </h1>
+    <ul data-th-each="c:${imgFiles}">
+        <img data-th-src="@{${'/images/'+ c}}" height = "300" width ="300"/>
+        <!-- <img data-th-src="@{${'/images/' + v}}" height="300" width="300"/> -->
+    </ul>
+</body>
+</html>
